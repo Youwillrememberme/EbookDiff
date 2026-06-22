@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+
+    <AssemblyName>EbookDiff</AssemblyName>
+    <RootNamespace>EbookDiff</RootNamespace>
+
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Company>EbookDiff</Company>
+    <Product>EbookDiff</Product>
+    <AssemblyTitle>电子书版本对比工具</AssemblyTitle>
+    <Description>极简的 Windows 电子书版本对比工具（EPUB / MOBI / AZW3 / TXT）</Description>
+    <Copyright>© 2026 EbookDiff</Copyright>
+
+    <SatelliteResourceLanguages>zh-Hans;en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+  <!-- 发布参数（仅在 dotnet publish 时由 build.bat 传 -p:PublishSingleFile=true 等触发） -->
+  <PropertyGroup Condition="'$(PublishSingleFile)'=='true'">
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Assets\app.ico" />
+  </ItemGroup>
+
+</Project>
